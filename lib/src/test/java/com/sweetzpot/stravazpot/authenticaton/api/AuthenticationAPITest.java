@@ -38,7 +38,8 @@ public class AuthenticationAPITest extends StravaAPITest {
     public void shouldDeauthorize() throws Exception {
         enqueueToken();
         AuthenticationAPI authenticationAPI = givenAnAuthenticationAPI();
-        authenticationAPI.deauthorize()
+        //TODO Set a valid accessToken here
+        authenticationAPI.deauthorize("test")
                 .execute();
     }
 
